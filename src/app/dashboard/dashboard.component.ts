@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from '../service/utility.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private utilService:UtilityService) {this.utilService.setShowBfBackground(false); this.utilService.setShowNavbar(true) }
 
   ngOnInit(): void {
+
   }
 
 }

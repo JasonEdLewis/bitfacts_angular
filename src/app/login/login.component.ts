@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UtilityService } from '../service/utility.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,9 +16,13 @@ export class LoginComponent implements OnInit {
       console.log(localStorage.getItem("creds"))
   }
 
-  constructor() { }
+  constructor(private utilService:UtilityService) {this.utilService.setShowNavbar(false);this.utilService.setShowBfBackground(true); }
 
   ngOnInit(): void {
-  }
 
+  }
+  ngOnDestroy(): void {
+    this.utilService.setShowNavbar(true);
+    this.utilService.setShowBfBackground(false);
+  }
 }

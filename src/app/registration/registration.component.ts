@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from '../service/utility.service';
 
 @Component({
   selector: 'app-registration',
@@ -9,9 +10,10 @@ export class RegistrationComponent implements OnInit {
 
   public states!:any [];
   public selectedState!: any [];
-  constructor() { }
+  constructor(private utilservice: UtilityService) {this.utilservice.setShowNavbar(false);this.utilservice.setShowBfBackground(false) }
 
   ngOnInit(): void {
+
   }
 
 }
