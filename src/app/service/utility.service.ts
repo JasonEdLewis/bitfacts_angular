@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class UtilityService {
   private showNavbar$ = new Subject<any>();
   private showBfBackground$= new Subject<any>();
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   public getShowNavbar(): Observable<any> {
     return this.showNavbar$.asObservable();
@@ -25,5 +26,12 @@ export class UtilityService {
     this.showBfBackground$.next(b);
   }
 
+  public get_call(url:string){
+   return this.http.get(url)
+  }
+
+  public post_call(url:string, payload:{}){
+    return this.http.post(url, payload)
+  }
 
 }

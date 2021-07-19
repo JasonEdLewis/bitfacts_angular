@@ -24,14 +24,10 @@
         type="button"
         label="Login"
         class="p-button-raised p-button-secondary p-button-outlined"
-        (onClick)="submitNewUser()"
+        (click)="postUser()"
       ></button>
     </div>
-    <div
-      class="p-col-4 p-offset-5 p-mt-2"
-      id="register"
-      style="margin-left: 265px"
-    >
+    <div class="p-col-4 p-offset-5 p-mt-2" id="register">
       <a [routerLink]="['/register']">
         <span>Register</span>
       </a>
