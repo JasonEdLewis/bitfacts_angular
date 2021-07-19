@@ -78,6 +78,10 @@
             "production": {
               "browserTarget": "facts:build:production"
             },
+            "options": {
+              "browserTarget": "project-name:build",
+              "proxyConfig": "src/proxy.conf.json"
+          },
             "development": {
               "browserTarget": "facts:build:development"
             }

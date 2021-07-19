@@ -1,8 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
-.main-logo {
+// body {
+//   background-image: url("./assets/images/BFGoodLogo.jpeg");
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+// }
+.bf-background {
   background-image: url("./assets/images/BFGoodLogo.jpeg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%;
   width: 100vw;
   height: 100vh;
+  position: absolute;
+}
+
+.login-div {
+  height: 50%;
+  width: 50%;
+  margin-top: 19%;
+  margin-left: 25%;
+  background-color: rgba(10, 10, 10, 0.8);
+}
+
+.login-div div {
+  margin-top: 25%;
+}
+
+#register a {
+  color: #df770b;
+  margin-left: 5%;
 }
